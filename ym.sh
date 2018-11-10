@@ -28,7 +28,7 @@ function recycle_download()
        rm -rf $tmp
        sleep 0.5
     done
-    echo "total:"$(echo "scale=2;${file_size:0:-1}*$count" | bc)" $count*$file_size"
+    echo $(date "+%F %H:%M:%S")" $count*$file_size "$(echo "scale=2;${file_size:0:-1}*$count" | bc)
   fi
 }
 
